@@ -700,7 +700,7 @@ input {
 }
 
 .sponsor__content:hover .sponsor__img {
-  filter: invert(0.5);
+  filter: invert(80);
 }
 
 .sponsor__img {
@@ -1471,7 +1471,7 @@ body > footer a {
 /* Transisoes e animacoes */
 
 body > footer:hover {
-    color: #000000;
+    color: #08f133;
     opacity: 1;
 } 
 
