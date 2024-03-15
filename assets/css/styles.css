@@ -1486,7 +1486,7 @@ body > footer:hover {
 
 @media screen and (max-width: 360px) {
     .gallery-element:hover img{ 
-        transform: scale: (1);
+        transform: scale(1);
     
     }
 }
