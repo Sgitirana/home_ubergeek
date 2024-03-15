@@ -36,6 +36,8 @@ function showSlider(type){
         SliderDom.prepend(SliderItemsDom[SliderItemsDom.length -1]);
         thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length -1]);
     }
+
+
     clearTimeout(runTimeOut);
     runTimeOut = setTimeout(() => {
         carouselDom.classList.remove('next');
@@ -47,3 +49,5 @@ function showSlider(type){
         next.click();
     }, timeAutoNext)
 }
+
+// video slider//

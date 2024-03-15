@@ -101,6 +101,9 @@
                 <div class="carousel">
         <div class="list">
             <div class="item">
+                <video autoplay muted id="video1_1080p" class="video1_1080p">
+                    <source src="assets/video/video1_1080p.mp4" type="video/mp4">
+                </video>
                 <img src="assets/img/a.jpg">
                 <div class="content">
                     <div class="author">UBER GEEK</div>
@@ -118,6 +121,9 @@
                 </div>
             </div>
             <div class="item">
+                <video autoplay muted id="video2_2160p" class="video2_2160p">
+                    <source src="assets/video/video2_2160p.mp4" type="video/mp4">
+                </video>
                 <img src="assets/img/b.jpg">
                 <div class="content">
                     <div class="author">TECNOLOGIA INTERATIVA</div>
@@ -136,6 +142,9 @@
                 </div>
             </div>
             <div class="item">
+                <video autoplay muted id="video3_2160p" class="video3_2160p">
+                    <source src="assets/video/video3_2160p.mp4" type="video/mp4">
+                </video>
                 <img src="assets/img/c.jpg">
                 <div class="content">
                     <div class="author">LABORATÓRIOS INTELIGENTES</div>
@@ -153,6 +162,9 @@
                 </div>
             </div>
             <div class="item">
+                <video autoplay muted id="video4_2160p" class="video4_2160p">
+                    <source src="assets/video/video4_2160p.mp4" type="video/mp4">
+                </video>
                 <img src="assets/img/d.jpg">
                 <div class="content">
                     <div class="author">APOIO TOTAL</div>
@@ -173,7 +185,10 @@
 
         <div class="thumbnail">
             <div class="item">
-                <img src="assets/img/a.jpg">
+                <video autoplay muted id="video1_1080p" class="video1_1080p">
+                    <source src="assets/video/video1_1080p.mp4" type="video/mp4">
+                </video>
+                <!-- <img src="assets/img/a.jpg"> -->
                 <div class="content">
                     <div class="title">
                         Locação
@@ -184,7 +199,10 @@
                 </div>
             </div>
             <div class="item">
-                <img src="assets/img/b.jpg">
+                <video autoplay muted id="video2_2160p" class="video2_2160p">
+                    <source src="assets/video/video2_2160p.mp4" type="video/mp4">
+                </video>
+                <!-- <img src="assets/img/b.jpg"> -->
                 <div class="content">
                     <div class="title">
                         Informe
@@ -195,7 +213,10 @@
                 </div>
             </div>
             <div class="item">
-                <img src="assets/img/c.jpg">
+                <video autoplay muted id="video3_2160p" class="video3_2160p">
+                    <source src="assets/video/video3_2160p.mp4" type="video/mp4">
+                </video>
+                <!--<img src="assets/img/c.jpg">-->
                 <div class="content">
                     <div class="title">
                         Programação
@@ -206,7 +227,10 @@
                 </div>
             </div>
             <div class="item">
-                <img src="assets/img/d.jpg">
+                <video autoplay muted id="video4_2160p" class="video4_2160p">
+                    <source src="assets/video/video4_2160p.mp4" type="video/mp4">
+                </video>
+                <!--<img src="assets/img/d.jpg">-->
                 <div class="content">
                     <div class="title">
                         Logística
@@ -779,5 +803,25 @@
 
         <!--******************** MAIN JS ********************-->
         <script src="assets/js/main.js"></script>
+
+        <script>
+            var $video  = $('video'),
+                $window = $(window); 
+            
+            $(window).resize(function(){
+                var height = $window.height();
+                $video.css('height', height);
+            
+                var videoWidth = $video.width(),
+                    windowWidth = $window.width(),
+                marginLeftAdjust =   (windowWidth - videoWidth) / 2;
+            
+                $video.css({
+                    'height': height, 
+                    'marginLeft' : marginLeftAdjust
+                });
+            }).resize();
+            </script>
+            
     </body>
 </html>
